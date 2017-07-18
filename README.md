@@ -1,11 +1,13 @@
 # dotfiles
 
-Personal dotfiles for the following programs:
+Personal dotfiles repository (managed with GNU Stow)
+
+Programs:
 * i3-gaps
 * i3status
-* dmenu
-* urxvt
 * bash
+* compton
 
-Requirements:
-* (TODO)
+TODO:
+* Requirements list (urxvt, dmenu, feh, terminus-font, and more)
+* Some screenshots probably

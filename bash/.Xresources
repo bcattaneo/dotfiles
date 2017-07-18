@@ -1,0 +1,88 @@
+! URXVT GENERAL CONFIG
+!------------------------------------------------
+URxvt.geometry: 80x22
+URxvt.internalBorder: 10
+
+! URXVT FONTS
+!------------------------------------------------
+URxvt.font:xft:Terminus:size=12
+URxvt.boldFont:xft:Terminus:bold:size=12
+URxvt.italicfont:xft:Terminus:italic:size=12
+URxvt.bolditalicFont:xft:Terminus:bold:italic:size=12
+URxvt*letterSpace: 0
+URxvt*allow_bold: true
+
+! URXVT FONT SETTINGS
+!------------------------------------------------
+Xft.autohint: true
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+! URXVT ENABLE LINK SUPPORT
+!------------------------------------------------
+URxvt.perl-lib: /usr/lib/urxvt/perl/
+URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.keysym.C-Delete: perl:matcher:last
+URxvt.keysym.M-Delete: perl:matcher:list
+URxvt.matcher.rend.0: Uline Bold fg3
+URxvt.insecure: false
+
+! URXVT COPY PASTE SHORTCUTS
+!------------------------------------------------
+URxvt.iso14755: False
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+
+! URXVT SCROLLBAR AND CURSOR STYLE
+!------------------------------------------------
+URxvt*saveLines: 300000
+URxvt.scrollBar: false
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: true
+
+! URXVT COLORS
+!------------------------------------------------
+
+! special
+*.foreground: #93a1a1
+*.background: #16031f
+*.cursorColor: #93a1a1
+
+! black
+*.color0: #5f5f5f
+*.color8: #828282
+
+! red
+*.color1: #c61340
+*.color9: #c61340
+
+! green
+*.color2: #ea1646
+*.color10: #ea1646
+
+! yellow
+*.color3: #9a64d9
+*.color11: #9a64d9
+
+! blue
+*.color4: #64a2d9
+*.color12: #8f99d9
+
+! magenta
+*.color5: #9a64d9
+*.color13: #b08fd9
+
+! cyan
+*.color6: #c61340
+*.color14: #c61340
+
+! white
+*.color7: #989898
+*.color15: #c5c5c5
