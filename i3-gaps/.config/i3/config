@@ -1,30 +1,7 @@
 # i3 config file (v4)
-#
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
-#
-# This config file uses keycodes (bindsym) and was written for the QWERTY
-# layout.
-#
-# To get a config file with the same key positions, but for your current
-# layout, use the i3-config-wizard
-#
-
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
-
 
 set $FOCUS #ea1646
 set $UNFOCUS #16031f
-#set $UNFOCUS #8f99d9
 
 # Font
 font pango:Terminus, FontAwesome, Ionicons 12
@@ -207,17 +184,6 @@ mode "resize" {
 
 bindsym Mod1+r mode "resize"
 
-### Shortcuts ###
-#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 1 sset 'Master' 5%+
-#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 1 sset 'Master' 5%-
-#bindsym XF86AudioMute exec --no-startup-id amixer sset 'Master' toggle
-#bindsym XF86AudioPlay exec --no-startup-id playcontrols toggle
-#bindsym XF86AudioStop exec --no-startup-id playcontrols stop
-#bindsym XF86AudioPrev exec --no-startup-id playcontrols prev
-#bindsym XF86AudioNext exec --no-startup-id playcontrols next
-#bindsym XF86Calculator exec --no-startup-id gnome-calculator 
-#bindsym XF86TouchpadToggle exec --no-startup-id /home/luca/Documenti/toggletouchpad
-
 # Controles volumen X1 Carbon
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
@@ -225,55 +191,15 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
-#bindsym Mod4+F12 exec --no-startup-id amixer -c 1 sset 'Master' 5%+
-#bindsym Mod4+F11 exec --no-startup-id amixer -c 1 sset 'Master' 5%-
-#bindsym Mod4+F10 exec --no-startup-id amixer sset 'Master' toggle
-#bindsym Mod4+Down exec --no-startup-id playcontrols toggle
-#bindsym Mod4+Up exec --no-startup-id playcontrols stop
-#bindsym Mod4+Left exec --no-startup-id playcontrols prev
-#bindsym Mod4+Right exec --no-startup-id playcontrols next
-#bindsym Mod4+KP_Enter exec --no-startup-id gnome-calculator 
-#bindsym Mod4+F9 exec --no-startup-id /home/luca/Documenti/toggletouchpad
-
-#bindsym Mod1+shift+g exec --no-startup-id geany
-#bindsym Mod1+p exec --no-startup-id pcmanfm
-#bindsym Mod1+shift+a exec --no-startup-id audacious
-#bindsym Mod1+shift+n exec --no-startup-id urxvt -name ncmpcpp -e ncmpcpp -s playlist 
-#bindsym Mod1+shift+f exec --no-startup-id urxvt -name ranger -e ranger
-#bindsym Mod1+shift+v exec --no-startup-id vlc
-#bindsym Mod1+shift+s exec --no-startup-id spotify --ui.track_notifications_enabled=false
-#bindsym Mod1+shift+i exec --no-startup-id icedove
-#bindsym Mod1+shift+b exec --no-startup-id iceweasel
-#bindsym Mod1+shift+p exec --no-startup-id urxvt -name games-launcher -e /home/luca/Documenti/games.sh
-#bindsym Mod1+Print exec --no-startup-id scrot 'Schermata%Y-%m-%d-%T.png' -e 'mv $f ~/Immagini/'
-
 # esto abre en la ventana especifica
 assign [class="Firefox"] $ws3
 assign [class="Telegram"] $ws4
 assign [class="Gimp"] $ws5
 assign [class="Thunderbird"] $ws6
-#assign [class="URxvt" instance="mcabber"] $ws2
-
+#assign [class="URxvt" instance="irssi"] $ws2
 
 ### floating windows ###
-#for_window [class="Steam"] floating enable
 for_window [class="Gimp"] floating enable
-#for_window [class="PlayOnLinux"] floating enable
-#for_window [class="URxvt" instance="games-launcher$"] move to workspace $ws5, floating enable , move absolute position 400px 200px
-
 
 ### Exec ###
 exec --no-startup-id compton -b -i 0.75 --config ~/.config/compton.conf
-#exec --no-startup-id compton -bG -i 0.75 
-#exec --no-startup-id iceweasel 
-#exec --no-startup-id conky -c ~/.config/panel/empty_conky
-#exec --no-startup-id i3-msg 'workspace $ws3'
-#exec --no-startup-id mkfontdir ~/.local/share/fonts && xset +fp ~/.local/share/fonts && xset fp rehash && ~/.config/panel/bar_config
-#exec --no-startup-id ~/Telegram
-#exec --no-startup-id sh ~/.fehbg
-#exec --no-startup-id mpd
-#exec --no-startup-id urxvt -name ncmpcpp -e ncmpcpp -s playlist
-#exec --no-startup-id urxvt -name tty-clock -e tty-clock -C 2 -c -d 20000000000
-#exec --no-startup-id xinput disable 'ETPS/2 Elantech Touchpad' 
-#exec --no-startup-id xinput set-prop 'USB Optical Mouse' 261 0.8
-#exec --no-startup-id sleep 3 && urxvt -name mcabber -e mcabbert
