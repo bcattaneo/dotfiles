@@ -8,4 +8,4 @@ Personal dotfiles for the following programs:
 * bash
 
 Requirements:
-* TODO
+* (TODO)
