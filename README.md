@@ -7,6 +7,7 @@ Programs:
 * i3status
 * bash
 * compton
+* mutt
 
 TODO:
 * Requirements list (urxvt, dmenu, feh, terminus-font, and more)
