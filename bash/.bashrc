@@ -12,6 +12,7 @@ alias bateria='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E 
 
 # SSH a servidores
 alias agente-ssh='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa'
+alias server1='ssh hasefroch@server1.cattaneo.uy'
 alias server3='ssh hasefroch@server3.cattaneo.uy'
 alias pleasemunch='sshfs hasefroch@please.munch.mypen.is:/var/www/pleasemunch ~/mnt/please.munch.mypen.is'
 

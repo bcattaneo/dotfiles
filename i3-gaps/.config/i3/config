@@ -1,7 +1,8 @@
 # i3 config file (v4)
 
-set $FOCUS #ea1646
-set $UNFOCUS #16031f
+set $FOCUS #54ced6
+set $UNFOCUS #1d1f21
+set $FONDO #000000
 
 # Font
 font pango:Terminus, FontAwesome, Ionicons 12
@@ -20,7 +21,7 @@ new_float pixel 1
 focus_follows_mouse no
 
 # Gaps
-set $default_gaps_inner 0
+set $default_gaps_inner 10
 set $default_gaps_outer 10
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
@@ -30,8 +31,12 @@ set $ws1 
 set $ws2 
 set $ws3 
 set $ws4 
-set $ws5 
-set $ws6 
+#set $ws5 
+#set $ws6 
+#set $ws7 
+#set $ws8 
+set $ws5 5-
+set $ws6 6-
 set $ws7 7-
 set $ws8 8-
 set $ws9 9-
@@ -41,15 +46,15 @@ set $ws10 10-
 bar {
         status_command i3status
 	colors {
-		background $UNFOCUS
-		statusline #ea1646
-		separator $UNFOCUS
+		background #000000
+		statusline #666666
+		separator #000000
 
-		focused_workspace 	$UNFOCUS $UNFOCUS #ea1646
-		inactive_workspace 	$UNFOCUS $UNFOCUS #93a1a1
-		active_workspace 	$UNFOCUS $UNFOCUS #ea1646
-		urgent_workspace 	$UNFOCUS $UNFOCUS #8f99d9
-		binding_mode 		$UNFOCUS $UNFOCUS #ea1646
+		focused_workspace 	$FONDO $FONDO $FOCUS
+		inactive_workspace 	$FONDO $FONDO #666666
+		active_workspace 	$FONDO $FONDO #9ec400
+		urgent_workspace 	$FONDO $FONDO #9ec400
+		binding_mode 		$FONDO $FONDO #9ec400
 	}
 }
 
@@ -70,7 +75,7 @@ bindsym Mod1+Return exec --no-startup-id urxvt
 bindsym Mod1+q kill
 
 # dmenu
-bindsym Mod1+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -nb #16031f -sb #16031f -sf #ea1646 -nf #93a1a1 -fn terminus-10 -i"
+bindsym Mod1+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -nb #000000 -sb #000000 -sf #54ced6 -nf #666666 -fn terminus-10 -i"
 
 # change focus
 bindsym Mod1+$left focus left
@@ -194,12 +199,11 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # esto abre en la ventana especifica
 assign [class="Firefox"] $ws3
 assign [class="Telegram"] $ws4
-assign [class="Gimp"] $ws5
-assign [class="Thunderbird"] $ws6
 #assign [class="URxvt" instance="irssi"] $ws2
 
 ### floating windows ###
 for_window [class="Gimp"] floating enable
 
 ### Exec ###
-exec --no-startup-id compton -b -i 0.75 --config ~/.config/compton.conf
+exec --no-startup-id compton -b -i --config ~/.config/compton.conf
+#exec --no-startup-id compton -b -i 0.75 --config ~/.config/compton.conf
