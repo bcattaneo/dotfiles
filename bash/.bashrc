@@ -26,11 +26,33 @@ alias apagar='sudo shutdown -h 0'
 alias reiniciar='sudo shutdown -r 0'
 
 # VIM
-alias configurar-vim='sudo vim /usr/share/vim/vimfiles/archlinux.vim'
+alias configurar-vim='sudo vim ~/.vimrc'
 
 # XRANDR
-alias monitor-cuarto='xrandr --output HDMI1 --auto --right-of LVDS1 & sh ~/.fehbg'
-alias monitor-living='xrandr --output HDMI1 --auto --right-of LVDS1 & sh ~/.fehbg'
+alias monitor-cuarto='displaylink2 && displaylink1 && displaylink0'
+alias monitor-solo='xrandr --output DVI-I-1-1 --off && xrandr --output HDMI1 --off && xrandr --output LVDS1 --auto && sh ~/.fehbg'
+alias monitor-living='xrandr --output HDMI1 --auto --right-of LVDS1 && sh ~/.fehbg'
+#alias displaylink0='xrandr --setprovideroutputsource 1 0'
+alias displaylink0='xrandr --output LVDS1 --off'
+alias displaylink1='xrandr --output DVI-I-1-1 --auto --left-of LVDS1 && sh ~/.fehbg'
+alias displaylink2='xrandr --output HDMI1 --auto --right-of LVDS1 --rotate left && sh ~/.fehbg'
+
+# GIT
+alias git-sud0='git config --global user.name "sud0" && git config --global user.email "sud0@thanksdisney.com"'
+alias git-bcattaneo='git config --global user.name "Bruno Cattáneo" && git config --global user.email "c@ttaneo.uy"'
+
+# OTROS
+alias desa='cd ~/ownCloud/Desarrollo'
+alias funcional1='cd "/home/hasefroch/ownCloud/UCU/Programación Funcional"'
+alias rdp1='rdesktop -f -u hasefroch server1.cattaneo.uy:8080'
+alias xilinx='source /opt/Xilinx/14.7/ISE_DS/settings64.sh'
 
 ## BASH PROMPT ##
-PS1="\[\e[32m\]\w\[\e[m\] > "
+PS1="\[\e[36m\]\w\[\e[m\] "
+#if [ -f `which powerline-daemon` ]; then
+#  powerline-daemon -q
+#  POWERLINE_BASH_CONTINUATION=1
+#  POWERLINE_BASH_SELECT=1
+#  #. /usr/share/powerline/bash/powerline.sh
+#  . /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+#fi

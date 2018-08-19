@@ -35,7 +35,7 @@ set $ws4 
 #set $ws6 
 #set $ws7 
 #set $ws8 
-set $ws5 5-
+set $ws5 
 set $ws6 6-
 set $ws7 7-
 set $ws8 8-
@@ -52,7 +52,7 @@ bar {
 
 		focused_workspace 	$FONDO $FONDO $FOCUS
 		inactive_workspace 	$FONDO $FONDO #666666
-		active_workspace 	$FONDO $FONDO #9ec400
+		active_workspace 	$FONDO $FONDO $FOCUS 
 		urgent_workspace 	$FONDO $FONDO #9ec400
 		binding_mode 		$FONDO $FONDO #9ec400
 	}
@@ -199,11 +199,14 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # esto abre en la ventana especifica
 assign [class="Firefox"] $ws3
 assign [class="Telegram"] $ws4
+assign [class="dde-file-manager"] $ws5
 #assign [class="URxvt" instance="irssi"] $ws2
 
 ### floating windows ###
 for_window [class="Gimp"] floating enable
+for_window [class="XTerm"] floating enable
+for_window [class="VirtualBox"] floating enable
 
 ### Exec ###
-exec --no-startup-id compton -b -i --config ~/.config/compton.conf
+exec --no-startup-id compton -b --config ~/.config/compton.conf
 #exec --no-startup-id compton -b -i 0.75 --config ~/.config/compton.conf
