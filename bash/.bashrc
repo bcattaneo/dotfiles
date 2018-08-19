@@ -38,12 +38,10 @@ alias displaylink1='xrandr --output DVI-I-1-1 --auto --left-of LVDS1 && sh ~/.fe
 alias displaylink2='xrandr --output HDMI1 --auto --right-of LVDS1 --rotate left && sh ~/.fehbg'
 
 # GIT
-alias git-sud0='git config --global user.name "sud0" && git config --global user.email "sud0@thanksdisney.com"'
 alias git-bcattaneo='git config --global user.name "Bruno Cattáneo" && git config --global user.email "c@ttaneo.uy"'
 
 # OTROS
 alias desa='cd ~/ownCloud/Desarrollo'
-alias funcional1='cd "/home/hasefroch/ownCloud/UCU/Programación Funcional"'
 alias rdp1='rdesktop -f -u hasefroch server1.cattaneo.uy:8080'
 alias xilinx='source /opt/Xilinx/14.7/ISE_DS/settings64.sh'
 
